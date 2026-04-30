@@ -1,0 +1,29 @@
+# 2-DO | Team Task Manager
+
+A minimal VS Code extension for real-time team collaboration.
+
+## 🛠 Setup & Development
+
+- **Install Deps:** `npm install`
+- **Build:** `npm run compile`
+- **Test:** Press `F5` to open the Extension Development Host.
+
+## ☁️ Firebase Config
+
+1. Create a project at [Firebase Console](https://console.firebase.google.com/).
+2. Enable **Firestore Database** in **Test Mode**.
+3. Copy your `firebaseConfig` into `src/extension.ts`.
+
+## 📦 Distribution
+
+To share this extension as a `.vsix` installer:
+
+1. **Install tool:** `npm install -g @vscode/vsce`
+2. **Package:** `vsce package`
+3. **Install:** Drag the `.vsix` file into your VS Code Extensions view.
+
+## ⌨️ Commands
+
+- `Add Task`: Click the **+** in the sidebar.
+- `Complete`: Click the **Check** icon on hover (toggles status).
+- `Delete`: Click the **Trash** icon to remove from cloud.

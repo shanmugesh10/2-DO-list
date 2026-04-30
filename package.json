@@ -1,0 +1,93 @@
+{
+  "name": "2-do",
+  "displayName": "2-DO",
+  "description": "Shared team to-do list",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.117.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "team-todo-explorer",
+          "title": "Team To-Do",
+          "icon": "$(checklist)"
+        }
+      ]
+    },
+    "views": {
+      "team-todo-explorer": [
+        {
+          "id": "teamTodoList",
+          "name": "Tasks"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "team-todo.addTask",
+        "title": "Add Task",
+        "icon": "$(add)"
+      },
+      {
+        "command": "team-todo.deleteTask",
+        "title": "Delete Task",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "team-todo.completeTask",
+        "title": "Complete Task",
+        "icon": "$(check)"
+      }
+    ],
+    "menus": {
+      "view/item/context": [
+        {
+          "command": "team-todo.completeTask",
+          "when": "viewItem == taskItem",
+          "group": "inline@1"
+        },
+        {
+          "command": "team-todo.deleteTask",
+          "when": "viewItem == taskItem",
+          "group": "inline@2"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm-run-all -p watch:*",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.117.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "esbuild": "^0.27.3",
+    "eslint": "^9.39.3",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.1"
+  },
+  "dependencies": {
+    "firebase": "^12.12.1"
+  }
+}
