@@ -29,6 +29,6 @@ To share this extension as a `.vsix` installer:
 - `Delete`: Click the **Trash** icon to remove from cloud.
 
 ###  Manual Installation (VSIX)
-* Download the `.vsix` installer from the **[GitHub Releases](https://github.com/your-username/your-repo/releases)** section.
+* Download the `.vsix` installer from the **[GitHub Releases](https://github.com/shanmugesh10/2-DO-list/releases)** section.
 * In VS Code, click the **three dots (...)** in the Extensions pane.
 * Select **Install from VSIX...** and choose the downloaded file.
