@@ -22,13 +22,6 @@
       ]
     },
     "views": {
-      "activitybar": [
-        {
-          "id": "team-todo-explorer",
-          "title": "Team To-Do",
-          "icon": "$(checklist)"
-        }
-      ],
       "team-todo-explorer": [
         {
           "id": "teamTodoList",
@@ -37,6 +30,11 @@
       ]
     },
     "commands": [
+      {
+        "command": "team-todo.joinTeam",
+        "title": "Join Team",
+        "icon": "$(account)"
+      },
       {
         "command": "team-todo.addTask",
         "title": "Add Task",
@@ -56,9 +54,14 @@
     "menus": {
       "view/title": [
         {
+          "command": "team-todo.joinTeam",
+          "when": "view == teamTodoList",
+          "group": "navigation@1"
+        },
+        {
           "command": "team-todo.addTask",
           "when": "view == teamTodoList",
-          "group": "navigation"
+          "group": "navigation@2"
         }
       ],
       "view/item/context": [
