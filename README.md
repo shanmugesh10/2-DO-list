@@ -2,9 +2,10 @@
 
 A minimal VS Code extension for real-time team collaboration.
 
-## How this helps me as a dev
+## How this helps me as a dev 
 - I like to work together with people everytime,me and my friends as a group,we do multiple projects and to keep track of our progress ,this extension will be a great help to me and my teamates, we dont have to worry about going to other platforms to check the to-do list ,through this extension it can accessed any time we want ,tht too in vsc ,where we all code.
-
+![img]("C:\Users\SHANMUGESH\Pictures\Screenshots\Screenshot 2026-05-03 043829.png")
+!
 ## 🚀 Features
 
 *   **Team Isolation**: Use unique "Join Codes" to create private task environments for your specific group.
